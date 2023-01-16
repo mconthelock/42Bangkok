@@ -1,0 +1,6 @@
+.DS_Store
+.breakpoints
+.ccls-cache/
+.replit
+replit.nix
+venv/
