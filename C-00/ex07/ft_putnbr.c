@@ -6,7 +6,7 @@
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:39:34 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/14 23:44:51 by csewanam         ###   ########.fr       */
+/*   Updated: 2023/01/16 22:37:45 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,22 @@
 
 void	ft_putnbr(int nb)
 {
-}
+	char	c[10];
+	int		n;
+	int		i;
 
-int	main(void)
-{
-	ft_putnbr(12503);
-	return (0);
+	i = 0;
+	while (nb > 0)
+	{
+		n = nb % 10;
+		c[i] = n + 48;
+		nb = nb / 10;
+		++i;
+	}
+	--i;
+	while (i >= 0)
+	{
+		write(1, &c[i], 1);
+		--i;
+	}
 }
