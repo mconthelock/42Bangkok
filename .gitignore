@@ -1,2 +1,6 @@
 .DS_Store
-mywork.c
+.breakpoints
+.ccls-cache/
+.replit
+replit.nix
+venv/
