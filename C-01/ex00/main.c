@@ -5,18 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 17:16:01 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/27 17:17:46 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/27 14:43:15 by csewanam          #+#    #+#             */
+/*   Updated: 2023/01/27 14:54:57 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
+#include <stdio.h>
+
+void	ft_ft(int *nbr);
 
 int	main(void)
 {
-	char	*str;
+	int	a;
+	int	*p;
 
-	str = "Example";
-	ft_putstr(str);
+	p = &a;
+	ft_ft(p);
+	printf("%d\n", a);
 	return (0);
 }

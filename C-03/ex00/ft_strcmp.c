@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 17:16:01 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/27 17:17:46 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/26 21:21:57 by csewanam          #+#    #+#             */
+/*   Updated: 2023/01/26 23:20:59 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char *str);
-
-int	main(void)
+#include <stdio.h>
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	*str;
+	int	i;
 
-	str = "Example";
-	ft_putstr(str);
-	return (0);
+	i = 0;
+	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+	{
+		printf("%d\n", i);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
