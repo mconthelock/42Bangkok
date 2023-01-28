@@ -6,9 +6,11 @@
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 00:33:12 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/24 00:50:55 by csewanam         ###   ########.fr       */
+/*   Updated: 2023/01/28 09:44:04 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strlowcase(char *str)
 {
@@ -25,3 +27,13 @@ char	*ft_strlowcase(char *str)
 	}
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	c[] = "S.CHALORMSAK@GMAIL.COM";
+
+	ft_strlowcase(c);
+	printf("%s\n", c);
+	return (0);
+}
+*/
