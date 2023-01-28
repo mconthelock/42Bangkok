@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int	i;
@@ -27,3 +30,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/*
+int	main(void)
+{
+	char	src[20] = "Source Text";
+	char	des[20];
+
+	ft_strncpy(des, src, 3);
+	printf("%s\n", des);
+	return (0);
+}*/
