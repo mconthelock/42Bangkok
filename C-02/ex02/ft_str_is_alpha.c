@@ -6,9 +6,11 @@
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 23:01:34 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/23 23:20:17 by csewanam         ###   ########.fr       */
+/*   Updated: 2023/01/28 09:16:28 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -31,3 +33,14 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+/*
+int	main(void)
+{
+	int		n;
+	char	*c;
+
+	c = "@A Testor";
+	n = ft_str_is_alpha(c);
+	printf("%d\n", n);
+	return (0);
+}*/
