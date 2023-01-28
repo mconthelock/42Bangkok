@@ -23,3 +23,12 @@ void	ft_putstr(char *str)
 		++i;
 	}
 }
+
+int	main(void)
+{
+	char	*str;
+
+	str = "Example";
+	ft_putstr(str);
+	return (0);
+}
