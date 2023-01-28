@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -23,3 +26,14 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+int	main(void)
+{
+	char	src[20] = "Source Text";
+	char	dest[20];
+
+	ft_strcpy(dest, src);
+	printf("Result:  %s\n", dest);
+	return (0);
+}
+*/

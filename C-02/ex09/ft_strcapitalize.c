@@ -9,53 +9,19 @@
 /*   Updated: 2023/01/24 22:24:55 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
-int	ft_str_is_numeric(char *str)
+
+int	ft_is_cap(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < '0' || str[i] > '9') && str[i] != ' ')
-		{
-			return (0);
-		}
-		++i;
-	}
-	return (1);
-}
-
-int	ft_str_is_lowercase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'a' || str[i] > 'z') && str[i] != ' ')
-		{
-			return (0);
-		}
-		++i;
-	}
-	return (1);
-}
-
-int	ft_str_is_uppercase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'A' || str[i] > 'Z') && str[i] != ' ')
-		{
-			return (0);
-		}
-		++i;
-	}
-	return (1);
+	if (c >= '0' && c <= '9')
+		return (0);
+	else if (c >= 'a' && c <= 'z')
+		return (0);
+	else if (c >= 'A' && c <= 'Z')
+		return (0);
+	else
+		return (1);
 }
 
 char	*ft_strcapitalize(char *str)
@@ -67,18 +33,29 @@ char	*ft_strcapitalize(char *str)
 	n = 0;
 	while (str[i] != '\0')
 	{
-		if (n == 0)
+		if (n == 0 && (str[i] >= 'a' && str[i] <= 'z'))
 		{
-			if (str[i] >= 'a' || str[i] <= 'z')
-				str[i] = str[i] - 32;
+			str[i] = str[i] - 32;
 			++n;
 		}
-		else if (str[i] == ' ')
+		else if (ft_is_cap(str[i]) == 1 || str[i] == ' ')
 		{
-			n= 0;
+			n = 0;
 		}
-		printf("%d\n", n);
+		else
+		{
+			++n;
+		}
 		++i;
 	}
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	c[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	ft_strcapitalize(c);
+	printf("%s\n", c);
+	return (0);
+}
+*/
