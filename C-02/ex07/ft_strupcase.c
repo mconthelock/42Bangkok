@@ -6,9 +6,11 @@
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 00:07:22 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/24 00:49:41 by csewanam         ###   ########.fr       */
+/*   Updated: 2023/01/28 09:40:54 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strupcase(char *str)
 {
@@ -25,3 +27,13 @@ char	*ft_strupcase(char *str)
 	}
 	return (str);
 }
+/*
+int	main(void)
+{
+	char	c[] = "chalormsak Sewanam";
+
+	ft_strupcase(c);
+	printf("%s\n", c);
+	return (0);
+}
+*/
