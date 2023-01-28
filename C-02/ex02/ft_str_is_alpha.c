@@ -43,4 +43,5 @@ int	main(void)
 	n = ft_str_is_alpha(c);
 	printf("%d\n", n);
 	return (0);
-}*/
+}
+*/

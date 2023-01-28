@@ -37,4 +37,5 @@ int	main(void)
 	n = ft_str_is_numeric(c);
 	printf("%d\n", n);
 	return (0);
-}*/
+}
+*/

@@ -39,4 +39,5 @@ int	main(void)
 	ft_strncpy(des, src, 3);
 	printf("%s\n", des);
 	return (0);
-}*/
+}
+*/

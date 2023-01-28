@@ -26,8 +26,8 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
 	char	src[20] = "Source Text";
 	char	dest[20];
@@ -35,4 +35,5 @@ char	*ft_strcpy(char *dest, char *src)
 	ft_strcpy(dest, src);
 	printf("Result:  %s\n", dest);
 	return (0);
-}*/
+}
+*/
