@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void	ft_swap(int *a, int *b)
 {
 	int	temp;
@@ -43,3 +45,21 @@ void	ft_sort_int_tab(int *tab, int size)
 		++i;
 	}	
 }
+/*
+int	main(void)
+{
+	int	n[] = {9, 4, 8, 11, 9, 6, 3};
+	int	*tab;
+	int	i;
+
+	tab = n;
+	ft_sort_int_tab(tab, 7);
+	i = 0;
+	while (i < 7)
+	{
+		printf("%d, ", tab[i]);
+		++i;
+	}
+	return (0);
+}
+*/
