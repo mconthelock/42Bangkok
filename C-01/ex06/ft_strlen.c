@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -21,3 +23,15 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
+/*
+int	main(void)
+{
+	int		len;
+	char	*str;
+
+	str = "Example";
+	len = ft_strlen(str);
+	printf("Len : %d\n", len);
+	return (0);
+}
+*/
