@@ -4,4 +4,4 @@
 .replit
 replit.nix
 venv/
-.out
+*.out
