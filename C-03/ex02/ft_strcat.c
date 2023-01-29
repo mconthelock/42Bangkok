@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 16:07:19 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/29 00:37:57 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/29 00:39:53 by csewanam          #+#    #+#             */
+/*   Updated: 2023/01/29 01:08:50 by csewanam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
 	i = 0;
-	while ((i < n) && (s1[i] != '\0' && s2[i] != '\0'))
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		if (s1[i] == s2[i])
-		{
-			++i;
-		}
-		else
-		{
-			return (s1[i] - s2[i]);
-		}
+		i++;
 	}
-	return (s1[i -1] - s2[i - 1]);
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }
 /*
 int main(void)
 {
-    char    s1[] = "1734";
-    char    s2[] = "1A35";
+    char s1[] = "hello ";
+    char s2[] = ", what's up?";
 
-    printf("%d\n", ft_strncmp(s1, s2, 3));
-    printf("%d\n", strncmp(s1, s2, 3));
+    printf("%s\n", ft_strcat(s1, s2));
     return (0);
 }
 */
