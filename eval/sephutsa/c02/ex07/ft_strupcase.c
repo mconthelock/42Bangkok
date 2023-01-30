@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sephutsa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 21:21:57 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/26 23:20:59 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/29 20:05:45 by sephutsa          #+#    #+#             */
+/*   Updated: 2023/01/29 20:19:37 by sephutsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+	while (str[i])
 	{
-		++i;
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
+		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (str);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "1234";
-	char	s2[] = "5678";
-	
-	printf("%d\n", strcmp(s1, s2));
-	printf("%d\n", ft_strcmp(s1, s2));
+	abc[] = "sasdgajshdgasjhdagjshd;'/.s";
+	printf("%s \n", ft_strupcase(abc));
 	return (0);
-}
-*/
+}*/

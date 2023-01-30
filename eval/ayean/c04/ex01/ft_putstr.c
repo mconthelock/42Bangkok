@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayean <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 21:21:57 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/26 23:20:59 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/29 12:33:09 by ayean             #+#    #+#             */
+/*   Updated: 2023/01/29 13:04:26 by ayean            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 #include <string.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+	while (str[i])
 	{
-		++i;
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (s1[i] - s2[i]);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "1234";
-	char	s2[] = "5678";
-	
-	printf("%d\n", strcmp(s1, s2));
-	printf("%d\n", ft_strcmp(s1, s2));
+	char	str[] = "INTERSTELLA";
+
+	ft_putstr(str);
 	return (0);
 }
 */

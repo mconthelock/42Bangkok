@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayean <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 21:21:57 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/26 23:20:59 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/29 11:59:38 by ayean             #+#    #+#             */
+/*   Updated: 2023/01/29 18:31:05 by ayean            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strlen(char *str)
 {
-	int	i;
+	int	a;
 
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+	a = 0;
+	while (str[a])
 	{
-		++i;
+		a++;
 	}
-	return (s1[i] - s2[i]);
+	return (a);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "1234";
-	char	s2[] = "5678";
-	
-	printf("%d\n", strcmp(s1, s2));
-	printf("%d\n", ft_strcmp(s1, s2));
+	char	str[] = "COUNT ON ME AGAIN";
+
+	printf("%d\n", ft_strlen(str));
 	return (0);
 }
 */

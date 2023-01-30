@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: csewanam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sephutsa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 21:21:57 by csewanam          #+#    #+#             */
-/*   Updated: 2023/01/26 23:20:59 by csewanam         ###   ########.fr       */
+/*   Created: 2023/01/29 15:15:11 by sephutsa          #+#    #+#             */
+/*   Updated: 2023/01/29 15:32:53 by sephutsa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_str_is_numeric(char *str)
 {
-	int	i;
-
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0' && s2[i] != '\0'))
+	if (!*str)
+		return (1);
+	while (*str)
 	{
-		++i;
+		if (*str < '0' || *str > '9')
+		{
+			return (0);
+		}
+		str++;
 	}
-	return (s1[i] - s2[i]);
+	return (1);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "1234";
-	char	s2[] = "5678";
-	
-	printf("%d\n", strcmp(s1, s2));
-	printf("%d\n", ft_strcmp(s1, s2));
+	printf("%d %d %d\n", ft_str_is_numeric("01234554089"),
+			ft_str_is_numeric("21324x97x20"), ft_str_is_numeric(" "));
 	return (0);
-}
-*/
+}*/
